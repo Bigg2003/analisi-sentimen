@@ -1,9 +1,11 @@
 import joblib
 import streamlit as st
+import os
 
-# Load model & vectorizer
-model = joblib.load("C:\\Users\\Thinkpad T480\\Desktop\\Hackthon\\model\\model_sentiment.joblib")
-vectorizer = joblib.load("C:\\Users\\Thinkpad T480\\Desktop\\Hackthon\\model\\vectorizer.joblib")
+# Path relatif
+model = joblib.load(os.path.join("model", "model_sentiment.joblib"))
+vectorizer = joblib.load(os.path.join("model", "vectorizer.joblib"))
+
 
 # Streamlit app
 st.title("Analisis Sentimen App Shope - Naive Bayes")
